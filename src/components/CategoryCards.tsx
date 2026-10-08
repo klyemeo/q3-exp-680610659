@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function CategoryCards() {
   const expenses = useItemStore((state) => state.expenses);
-
+  //const icon = iconMap[category] || iconMap["Other"];
   return (
     <div className="grid gap-2 md:grid-cols-6">
       {categoryOptions.map((category) => {
@@ -36,12 +36,12 @@ export function CategoryCards() {
         return (
           // Use Card component to display values by category
           <Card>
-          <div>
+          
             <CardTitle> {category.label}</CardTitle>
           
             
             <CardContent>฿{categoryTotal.toFixed(2)}</CardContent>
-          </div>
+       
           </Card>
 
         );
